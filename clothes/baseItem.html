@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>bones.</title>
+        <link rel="stylesheet" href="../styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <nav class="vertical-menu-left nav-link">
+            <input type="text" placeholder="search." class="search-bar"><br>
+            <a href="#">login.</a>
+            <a href="#">browse.</a>
+            <a href="#">shirts.</a>
+            <a href="#">pants.</a>
+            <a href="#">cap.</a>
+            <a href="../index.html">home.</a>
+            <button style="bottom: 0;" onclick="darkMode()">
+                <img src="../images/ios13-control-center-dark-mode-icon.png" id="dark">
+            </button>
+            <script>
+            function darkMode() {
+                var darkBody = document.body;
+                var darkNavLeft = document.querySelector(".vertical-menu-left");
+                var darkSearch = document.querySelector(".search-bar");
+                var darkGrid = document.querySelectorAll(".grid-item");
+                var darkNavRight = document.querySelector(".vertical-menu-right");
+                var darkLabel = document.querySelectorAll(".label");
+                var darkContent = document.querySelector(".content")
+                darkBody.classList.toggle("dark-mode");
+                darkNavLeft.classList.toggle("dark-mode");
+                darkNavRight.classList.toggle("dark-mode");
+                darkSearch.classList.toggle("dark-mode");
+                darkContent.classList.toggle("dark-mode");
+                darkLabel.forEach(function(item) {
+                    item.classList.toggle("dark-mode");
+                });
+                darkGrid.forEach(function(item) {
+                    item.classList.toggle("dark-mode");
+                });
+            }
+            $(document).ready(function() {
+            $('#resizing_select').change(function() {
+                $("#width_tmp_option").html($('#resizing_select option:selected').text());
+                $(this).width($("#width_tmp_select").width());
+            });
+            });
+            </script>
+        </nav>
+        <nav class="vertical-menu-right nav-link">
+            <label for="size" class="label">size..</label>
+            <select name="size" id="resizing_select">
+                <option value="small">small.</option>
+                <option value="medium">medium.</option>
+                <option value="large">large.</option>    
+            </select>
+            <select id="width_tmp_select"><option id="width_tmp_option"></option></select>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <br>
+            <label for="size" class="label">gender..</label>
+            <select name="size" id="resizing_select">
+                <option value="male">male.</option>
+                <option value="female">female.</option>
+            </select>
+            <select id="width_tmp_select"><option id="width_tmp_option"></option></select>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <br>
+            <label for="size" class="label">color..</label>
+            <select name="size" id="resizing_select">
+                <option value="black">black.</option>
+                <option value="white">white.</option>    
+            </select>
+            <select id="width_tmp_select"><option id="width_tmp_option"></option></select>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+            <a href="#">buy now.</a>
+        </nav>
+        <div class="content">
+            <h1>TITLE OF CLOTHING.</h1>
+            <img src="../images/placeholder.png" id="bigClothing">
+            <h2>XX.XX$</h2>
+        </div>
+    </body>
+</html>
