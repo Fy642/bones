@@ -6,15 +6,7 @@
         <title>bones.</title>
         <link rel="stylesheet" href="styles.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                $("#image").hover(function(){
-                    $(this).attr("src", "images/hover\ over\ 1.png");
-                    }, function(){
-                    $(this).attr("src", "images/1.png");
-                });
-                });
-        </script>
+        <script src="scripts.js"></script>
     </head>
     <body>
         <nav class="vertical-menu-left nav-link">
@@ -28,36 +20,18 @@
             <button style="bottom: 0;" onclick="darkMode()">
                 <img src="images/dark-mode.png" id="dark">
             </button>
-            <script>
-            function darkMode() {
-                var darkBody = document.body;
-                var darkNavLeft = document.querySelector(".vertical-menu-left");
-                var darkSearch = document.querySelector(".search-bar");
-                var darkGrid = document.querySelectorAll(".grid-item");
-                var darkContent = document.querySelectorAll(".content")
-                darkBody.classList.toggle("dark-mode");
-                darkNavLeft.classList.toggle("dark-mode");
-                darkSearch.classList.toggle("dark-mode");
-                darkContent.forEach(function(item) {
-                    item.classList.toggle("dark-mode")
-                });
-                darkGrid.forEach(function(item) {
-                    item.classList.toggle("dark-mode");
-                });
-            }
-            </script>
         </nav>
         <div class="content">
             <h1>BONES.</h1>
             <div class="grid-container"> <!--if you want one of these to change when you hover over, change the script at the top. You might need to add a whole different script that just changes the id r smth if you want more than 1-->
-                <div class="grid-item"><a href="clothes/(1).html"><img src="">PLACEHOLDER</a></div>
-                <div class="grid-item"><a href="clothes/(2).html"><img src="">PLACEHOLDER</a></div>
-                <div class="grid-item"><a href="clothes/(3).html"><img src="">PLACEHOLDER</a></div>
-                <div class="grid-item"><a href="clothes/(4).html"><img src="">PLACEHOLDER</a></div>
-                <div class="grid-item"><a href="clothes/(5).html"><img src="">PLACEHOLDER</a></div>
-                <div class="grid-item"><a href="clothes/(6).html"><img src="">PLACEHOLDER</a></div>
-                <div class="grid-item"><a href="clothes/(7).html"><img src="">PLACEHOLDER</a></div>
-                <div class="grid-item"><a href="clothes/(8).html"><img src="">PLAEHOLDER</a></div>
+                <div class="grid-item"><a href="clothes/(1).html"><img id="image" src="images/dark-mode.png">PLACEHOLDER</a></div>
+                <div class="grid-item"><a href="clothes/(2).html"><img src="images/dark-mode.png">PLACEHOLDER</a></div>
+                <div class="grid-item"><a href="clothes/(3).html"><img src="images/dark-mode.png">PLACEHOLDER</a></div>
+                <div class="grid-item"><a href="clothes/(4).html"><img src="images/dark-mode.png">PLACEHOLDER</a></div>
+                <div class="grid-item"><a href="clothes/(5).html"><img src="images/dark-mode.png">PLACEHOLDER</a></div>
+                <div class="grid-item"><a href="clothes/(6).html"><img src="images/dark-mode.png">PLACEHOLDER</a></div>
+                <div class="grid-item"><a href="clothes/(7).html"><img src="images/dark-mode.png">PLACEHOLDER</a></div>
+                <div class="grid-item"><a href="clothes/(8).html"><img src="images/dark-mode.png">PLAEHOLDER</a></div>
             </div>
         </div>
     </body>

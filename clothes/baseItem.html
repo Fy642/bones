@@ -6,6 +6,7 @@
         <title>bones.</title>
         <link rel="stylesheet" href="../styles.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="../scripts.js"></script>
     </head>
     <body>
         <nav class="vertical-menu-left nav-link">
@@ -19,34 +20,6 @@
             <button style="bottom: 0;" onclick="darkMode()">
                 <img src="../images/ios13-control-center-dark-mode-icon.png" id="dark">
             </button>
-            <script>
-            function darkMode() {
-                var darkBody = document.body;
-                var darkNavLeft = document.querySelector(".vertical-menu-left");
-                var darkSearch = document.querySelector(".search-bar");
-                var darkGrid = document.querySelectorAll(".grid-item");
-                var darkNavRight = document.querySelector(".vertical-menu-right");
-                var darkLabel = document.querySelectorAll(".label");
-                var darkContent = document.querySelector(".content")
-                darkBody.classList.toggle("dark-mode");
-                darkNavLeft.classList.toggle("dark-mode");
-                darkNavRight.classList.toggle("dark-mode");
-                darkSearch.classList.toggle("dark-mode");
-                darkContent.classList.toggle("dark-mode");
-                darkLabel.forEach(function(item) {
-                    item.classList.toggle("dark-mode");
-                });
-                darkGrid.forEach(function(item) {
-                    item.classList.toggle("dark-mode");
-                });
-            }
-            $(document).ready(function() {
-            $('#resizing_select').change(function() {
-                $("#width_tmp_option").html($('#resizing_select option:selected').text());
-                $(this).width($("#width_tmp_select").width());
-            });
-            });
-            </script>
         </nav>
         <nav class="vertical-menu-right nav-link">
             <label for="size" class="label">size..</label>
